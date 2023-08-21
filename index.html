@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/c3be1e6b5f.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>To-Do Application</title>
+  </head>
+  <body>
+    <div class="to-do-container">
+      <div class="container">
+        <!-- <heading or appbar> -->
+        <div class="to-do">
+          <h1>TO DO APP</h1>
+          <p>
+            Welcome to To-Do-App Your all-in-one tool to manage tasks, stay
+            productive, and accomplish your goals. Whether it's for work,
+            school, or your personal life, our intuitive to-do app helps you
+            keep track of what matters most.
+          </p>
+        </div>
+        <!-- <2nd-container> -->
+        <div class="to-do-content">
+          <!-- <adding input> -->
+          <div>
+            <h4>Add Item</h4>
+            <form>
+              <input
+                id="task-name"
+                type="text"
+                placeholder="Add Item"
+                spellcheck="false"
+              />
+              <button type="submit" onclick="submitForm(event)">Submit</button>
+            </form>
+          </div>
+
+          <!--showing the list of items -->
+          <div class="parent-item-container">
+            <h4>Item List</h4>
+            <div class="item-list">
+              
+            </div>
+          </div>
+         
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

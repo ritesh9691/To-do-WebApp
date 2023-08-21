@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,700&family=Rajdhani&family=Roboto:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  overflow-y: hidden;
+  background-color: #c4c3bd;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.to-do-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 7px 7px 10px #5e5e5e;
+  background-color: #dcdcda;
+  height: 85%;
+  width: 75%;
+}
+
+.container {
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 90%;
+}
+
+.to-do {
+  justify-content: center;
+  width: 70%;
+  height: 170px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 20px;
+}
+
+.to-do p {
+  font-size: 1.2rem;
+  font-family: "Rajdhani";
+  font-weight: 400;
+
+  text-align: center;
+}
+.to-do h1 {
+  font-weight: bolder;
+  font-size: 2.8rem;
+  font-family: "Rajdhani";
+}
+.to-do-content {
+  margin-top: 10%;
+
+  display: flex;
+  /* flex-wrap: wrap; */
+  width: 100%;
+  height: 100%;
+  align-items: start;
+  justify-content: space-evenly;
+  gap: 50px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form h4 {
+  font-family: "Rajdhani";
+  font-size: 1.7rem;
+}
+form input[type="text"] {
+  padding: 5px;
+  font-family: "Rajdhani";
+  font-weight: bolder;
+  font-size: 1.6rem;
+  color: black;
+  margin: 20px 0;
+  border: 2px solid #a5bed8;
+  border-radius: 10px;
+  width: 400px;
+  height: 40px;
+}
+form button {
+  height: 40px;
+  width: 100px;
+  border: none;
+  border-radius: 10px;
+  background-color: #61a2e7;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.parent-item-container {
+  padding: 5px 0;
+  /* border: 2px solid #5e5e5e; */
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-height: 65%;
+}
+.item-list {
+  overflow: scroll;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 5px;
+  max-height: 100%;
+}
+.parent-item-container h4 {
+  text-align: center;
+  margin-bottom: 2px;
+  margin: 5px 0;
+  font-family: "Rajdhani";
+  font-size: 1.7rem;
+}
+.item-list-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 20px;
+  width: 80%;
+  border-radius: 10px;
+  border: 1px solid #5e5e5e;
+  height: 40px;
+  background-color: #c4c3bd;
+}
+
+.item-list-container h3 {
+  width: 80%;
+  font-family: "Rajdhani";
+  font-size: 1.4rem;
+}
+.item-list-container {
+  animation-name: moveingleft;
+  animation-duration: 1s;
+  transition: 2s ease-out;
+}
+
+@keyframes moveingleft {
+  0% {
+    opacity: 0%;
+    transform: translatex(-100px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translate(0px);
+  }
+}
+
+.item-delete {
+  animation-name: moveingright;
+  animation-duration: 2s;
+  transition: 2s ease-out;
+}
+
+@keyframes moveingright {
+  0% {
+    opacity: 100%;
+    transform: translatex(0px);
+  }
+  100% {
+    opacity: 0%;
+    transform: translate(-500px);
+  }
+}
+.task-completed {
+  animation-name: moveingup;
+  animation-duration: 2s;
+  transition: 2s ease-out;
+}
+
+@keyframes moveingup {
+  0% {
+    opacity: 100%;
+    transform: translateX(0px);
+  }
+  100% {
+    opacity: 0%;
+    transform: translateY(-100px);
+  }
+}
